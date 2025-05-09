@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buy Airtime</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  
+<body>
+  <header>
+    <div class="navbar">
+      <h1 class="logo">Naija VTU</h1>
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+      <nav id="nav-links">
+        <a href="airtime.html">Airtime</a>
+        <a href="data.html">Data</a>
+        <a href="cable.html">Cable TV</a>
+        <a href="electricity.html">Electricity</a>
+        <a href="wallet.html">Wallet</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </div>
+  </header>
+    <h1>Buy Airtime</h1>
+    <main>
+      <section class="form-container"> 
+    <form onsubmit="submitForm(event)">
+      <label>Network</label>
+      <select required>
+        <option value="">--Select--</option>
+        <option value="mtn">MTN</option>
+        <option value="glo">GLO</option>
+        <option value="airtel">Airtel</option>
+        <option value="9mobile">9Mobile</option>
+      </select>
+  
+      <label>Phone Number</label>
+      <input type="tel" required placeholder="08012345678" />
+  
+      <label>Amount (₦)</label>
+      <input type="number" required />
+  
+      <button type="submit">Buy Airtime</button>
+    </form>
+      </section>
+    </main>
+    
+  <script>
+    document.getElementById('menu-toggle').onclick = function () {
+      document.getElementById('nav-links').classList.toggle('active');
+    };
+  </script>
+  
+</body>
+</html>

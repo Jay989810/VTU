@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up | Naija VTU</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <h1 class="logo">Naija VTU</h1>
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+      <nav id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="airtime.html">Airtime</a>
+        <a href="data.html">Data</a>
+        <a href="electricity.html">Electricity</a>
+        <a href="cable.html">Cable</a>
+        <a href="wallet.html">Wallet</a>
+
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="form-container">
+      <h2>Create an Account</h2>
+      <form onsubmit="handleSignup(event)">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" required placeholder="Your full name">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" required placeholder="you@example.com">
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" required placeholder="08012345678">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" required placeholder="********">
+
+        <button type="submit">Sign Up</button>
+      </form>
+
+      <p style="text-align: center; margin-top: 20px;">Already have an account? <a href="login.html">Login</a></p>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('menu-toggle').onclick = function () {
+      document.getElementById('nav-links').classList.toggle('active');
+    };
+
+    function handleSignup(event) {
+      event.preventDefault();
+      const name = document.getElementById("fullname").value;
+      alert("Welcome, " + name + "! Your account has been created.");
+    }
+  </script>
+</body>
+</html>

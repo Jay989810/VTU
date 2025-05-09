@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buy Airtime</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  
+<body>
+  <header>
+    <div class="navbar">
+      <h1 class="logo">Naija VTU</h1>
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+      <nav id="nav-links">
+        <a href="airtime.html">Airtime</a>
+        <a href="data.html">Data</a>
+        <a href="cable.html">Cable TV</a>
+        <a href="electricity.html">Electricity</a>
+        <a href="wallet.html">Wallet</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </div>
+  </header>
+  
+    <h1>Buy Data</h1>
+  
+  <main>
+    <section class="form-container"> 
+    <form>
+      <label for="network">Select Network:</label>
+      <select id="network" required>
+        <option value="">--Choose--</option>
+        <option value="mtn">MTN</option>
+        <option value="glo">Glo</option>
+        <option value="airtel">Airtel</option>
+        <option value="9mobile">9mobile</option>
+      </select>
+
+      <label for="bundle">Select Data Bundle:</label>
+      <select id="bundle" required>
+        <option value="">--Choose--</option>
+        <option value="500mb_100">500MB – ₦100</option>
+        <option value="1gb_200">1GB – ₦200</option>
+        <option value="2gb_500">2GB – ₦500</option>
+        <option value="5gb_1000">5GB – ₦1000</option>
+      </select>
+
+      <label for="phone">Enter Phone Number:</label>
+      <input type="tel" id="phone" placeholder="080XXXXXXXX" required>
+
+      <button type="submit">Buy Data</button>
+    </form>
+  </main>
+  <script>
+    document.getElementById('menu-toggle').onclick = function () {
+      document.getElementById('nav-links').classList.toggle('active');
+    };
+  </script>
+  
+</body>
+</html>
