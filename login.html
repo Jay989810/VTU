@@ -22,25 +22,38 @@
       </nav>
     </div>
   </header>
-
   <main>
     <section class="form-container">
-      <h2>Login</h2>
-      <form>
-        <label for="email">Email</label>
-        <input type="email" id="email" required>
+  <h1>Login</h1>
+  <form onsubmit="login(event)">
+    <form>
+      <label for="email">Email</label>
+      <input type="email" id="email" required>
 
-        <label for="password">Password</label>
-        <input type="password" id="password" required>
+      <label for="password">Password</label>
+      <input type="password" id="password" required>
 
-        <button type="submit">Login</button>
-      </form>
+      <button type="submit">Login</button>
+    </form>
 
-      <p style="text-align: center; margin-top: 20px;">Don't have an account? <a href="signup.html">Sign up</a></p>
-    </section>
-  </main>
-
+    <p style="text-align: center; margin-top: 20px;">Don't have an account? <a href="signup.html">Sign up</a></p>
+  </section>
+</main>
   <script>
+    function login(e) {
+      e.preventDefault();
+      const user = JSON.parse(localStorage.getItem("vtuUser"));
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      if (user && user.email === email && user.password === password) {
+        localStorage.setItem("isLoggedIn", "true");
+        alert("Login successful!");
+        window.location.href = "airtime.html";
+      } else {
+        alert("Incorrect email or password.");
+      }
+    }
     document.getElementById('menu-toggle').onclick = function () {
       document.getElementById('nav-links').classList.toggle('active');
     };
