@@ -226,6 +226,61 @@ main div[style*="color: green"] {
   .hero p {
     font-size: 1rem;
   }
+  .services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+.service-card {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.service-card h3 {
+  margin-top: 15px;
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  padding: 60px 20px;
+  background: #0052d4;
+  color: white;
+}
+.cta a {
+  background: #00c896;
+  color: white;
+  padding: 14px 28px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* Footer */
+footer {
+  background: #001f4d;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hero h1 { font-size: 2.2rem; }
+}
+p{
+  color: black;
+}
 
   .feature-list {
     flex-direction: column;
